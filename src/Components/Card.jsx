@@ -8,10 +8,7 @@ const Card = ({item}) => {
   const {state, dispatch} = useGlobalState()
   const { name, username, id } = item;
 
-  const {recipeSelected} = state
-
   const addFav = ()=>{
-
     dispatch({type: 'ADD_FAV', payload: item})
   }
 
@@ -20,14 +17,12 @@ const Card = ({item}) => {
         <Link to={'/detail/' + id}>
           
           <img className="img" src="./images/doctor.jpg" alt="doctor" />
-
           { 
             <div className="data-card">
               <h3>{name}</h3>
               <p>{username} - {id}</p>
             </div>
           }
-          {/* Ademas deberan integrar la logica para guardar cada Card en el localStorage */}
         </Link>
         <button onClick={addFav} className="favButton">⭐</button>
     </div>

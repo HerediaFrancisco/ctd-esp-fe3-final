@@ -2,7 +2,6 @@ import { Link } from "react-router-dom"
 import { routes } from "../utils/routes"
 import { useGlobalState } from '../Context/context'
 
-//Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
 const Navbar = () => {
   const { state, dispatch } = useGlobalState();
