@@ -12,9 +12,9 @@ code {
     monospace;
 }
 .favButton{
-  background-color: rgba(136, 136, 136, 1);
+  background-color: rgb(181, 181, 181);
   padding: 10px;
-  border: none;
+  border: 1px solid #0f0f0f;
   width: 100%;
   cursor: pointer;
 }

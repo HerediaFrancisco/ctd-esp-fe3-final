@@ -7,6 +7,9 @@ export const reducer = (state, action) => {
         case 'ADD_FAV':
                 return {...state, favs: [...state.favs, action.payload]
                 }
+        case 'DELETE_FAV':
+                const filtrarFavs = state.favs.filter((fav) => fav.id !== action.payload)
+                return {...state, favs: filtrarFavs}
         case 'THEME':
             return {...state, theme: state.theme === 'dark' ? 'light' : 'dark'}
     }

@@ -13,6 +13,13 @@ const Card = ({item}) => {
     alert(`Dentista ${name} ${username} agregado a favoritos`)
   }
 
+  const deleteFav = () => {
+    dispatch({ type: 'DELETE_FAV', payload: id });
+    alert(`Dentista ${name} ${username} eliminado de favoritos`)
+  };
+  
+  const esFav = state.favs.some((fav) => fav.id === id);
+
   return (
     <div className={`card ${state.theme === 'dark' ? 'dark' : 'light'}`}>
         <Link to={'/dentist/' + id}>
@@ -21,11 +28,11 @@ const Card = ({item}) => {
           { 
             <div className="data-card">
               <h3>{name}</h3>
-              <p>{username} - {id}</p>
+              <p>{username}</p>
             </div>
           }
         </Link>
-        <button onClick={addFav} className="favButton">⭐</button>
+        <button onClick={esFav ? deleteFav : addFav} className="favButton">⭐</button>
     </div>
   );
 };
