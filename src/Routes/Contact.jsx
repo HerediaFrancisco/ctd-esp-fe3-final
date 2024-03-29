@@ -4,7 +4,7 @@ import { useGlobalState } from '../Context/context'
 
 
 const Contact = () => {
-  const { state, dispatch } = useGlobalState();
+  const {state} = useGlobalState();
   return (
     <div className={state.theme === 'dark' ? 'dark' : 'light'}>
       <h2 className='contact'>Want to know more?</h2>

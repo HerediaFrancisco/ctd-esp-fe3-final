@@ -10,11 +10,12 @@ const Card = ({item}) => {
 
   const addFav = ()=>{
     dispatch({type: 'ADD_FAV', payload: item})
+    alert(`Dentista ${name} ${username} agregado a favoritos`)
   }
 
   return (
     <div className={`card ${state.theme === 'dark' ? 'dark' : 'light'}`}>
-        <Link to={'/detail/' + id}>
+        <Link to={'/dentist/' + id}>
           
           <img className="img" src="./images/doctor.jpg" alt="doctor" />
           { 

@@ -19,8 +19,9 @@ code {
   cursor: pointer;
 }
 
-h1{
+h1, h2{
   text-align: center;
+  margin: 0px 0px 20px 0px;
 }
 
 nav{
@@ -47,7 +48,6 @@ footer {
   position: relative;
   bottom: 0;
   height: 40px;
-  margin-top: 2rem;
 }
 
 footer > img{

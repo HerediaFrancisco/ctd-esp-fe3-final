@@ -20,7 +20,6 @@ const context = ({children}) => {
     useEffect(()=>{
         axios(url)
         .then(res => {
-            
             dispatch({type: 'GET_LIST', payload:res.data})
         })
     },[])
